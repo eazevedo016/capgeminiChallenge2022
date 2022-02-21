@@ -8,7 +8,7 @@ public class Stairs {
     n = scan.nextInt();
     int auxiliary = n;
 
-
+    //laço for para escrever os asteriscos conforme formatação pedida.
     for(int i=1; i<=n; ++i){
       String symbol = "*";
       String space = " ";

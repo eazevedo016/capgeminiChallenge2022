@@ -8,12 +8,21 @@ public class Anagram {
   //declarando arrayList como sendo global
   public static final List<Integer> listaPosicoes = new ArrayList<>();
 
-  
-  public static String converteParaMinusculo(String word){
-    return word.toLowerCase();     
+
+  /** Função para identifcar os caracteres repetidos e extraí-los
+    * @param palavra String - String a ser analisada.
+    * @return String - Retorna uma string tendo convertido todos os seus caracteres para minúsculo.
+  */
+  public static String converteParaMinusculo(String palavra){
+    return palavra.toLowerCase();     
   }
-  
+
  
+  /** Procedimeto para retirar os caracteres repetidos da lista de caracteres repetidos já extraídos da string
+    * @param palavra String - String a ser comparada.
+    * @param listaCaracteresRepetidos ArrayList<Character> - Lista com os caracteres repetidos da palavra, inclusive repetidos na própria lista.
+    * @return ArrayList<String> - Retorna uma lista somente com os caracteres únicos que se repetem dentro da String palavra.
+  */
   public static void retiraTodosCaracteresRepetidos(ArrayList<Character> listaCaracteresRepetidos, String palavra){
     Set<Character> listaSemRepeticoes = new HashSet<>();
 
@@ -33,16 +42,13 @@ public class Anagram {
     }
     System.out.println("O numero '1' eh o caracter que se repete e os outros numeros as posicoes desse caracter na string");
     System.out.println(listaPosicoes);
+  }
 
-    for(int i = 1; i <- listaPosicoes.size(); i++){
-      System.out.println("entrou");
-      if(listaPosicoes.get(i)!=-1)
-      System.out.println(listaPosicoes.get(i) + "poasd");
-    }
-
-}
   
-  
+  /** Função para identifcar os caracteres repetidos e extraí-los
+    * @param palavra String - String a ser analisada.
+    * @return ArrayList<String> - Retorna uma lista com os caracteres repetidos
+  */
   public static ArrayList<Character> extraiTodosCaracteresRepetidos(String palavra){
     ArrayList<Character> list = new ArrayList<Character>();
 
@@ -67,6 +73,7 @@ public class Anagram {
 
     scan.close();
   }
+  
 }
     
 
